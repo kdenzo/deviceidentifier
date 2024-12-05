@@ -11,6 +11,6 @@ if [[ " ${DEVICE_MODELS[@]} " =~ " ${CURRENT_MODEL} " ]]; then
     echo "Device recognized as $CURRENT_MODEL"
     exit
 else
-    echo "Error: Device not Supported yet."
+    echo "Error: Device not Recognized!"
     exit 1
 fi
