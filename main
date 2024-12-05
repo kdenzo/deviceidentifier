@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# list of recognized device models
+DEVICE_MODELS=("SM-A226B" "SM-G991B" "Pixel-6")
+
+# Get phone model
+CURRENT_MODEL=$(getprop ro.product.model)
+
+# Check model
+if [[ " ${DEVICE_MODELS[@]} " =~ " ${CURRENT_MODEL} " ]]; then
+    echo "Device recognized as $CURRENT_MODEL"
+    exit
+else
+    echo "Error: Device not Supported yet."
+    exit 1
+fi
